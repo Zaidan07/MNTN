@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { playfair, poppins } from "./fonts/font";
+import bghero from "@/assets/hero/hero-image.png";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,10 +15,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${playfair.variable} ${poppins.variable} antialiased`}>
+        <div
+          className="relative"
+          style={{
+            backgroundImage: `url(${bghero.src})`,
+            backgroundSize: "cover",
+            width: "100%",
+            height: "100vh",
+          }}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );

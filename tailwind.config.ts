@@ -8,10 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
+      backgroundImage: {
+        'hero-image': "url('/src/assets/hero/hero-image.png')",
+      }
     },
   },
   plugins: [],
