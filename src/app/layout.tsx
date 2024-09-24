@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { playfair, poppins } from "./fonts/font";
-import bghero from "@/assets/hero/hero-image.png";
+import PaddingContainer from "@/components/Common/PaddingContainer/PaddingContainer";
+import bgheros from "@/assets/hero/hero-image.png";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,15 +18,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${playfair.variable} ${poppins.variable} antialiased`}>
         <div
-          className="relative"
+          className="absolute"
           style={{
-            backgroundImage: `url(${bghero.src})`,
-            backgroundSize: "cover",
+            backgroundImage: `url(${bgheros.src})`,
+            backgroundSize: "cover", // Ganti menjadi cover
+            backgroundPosition: "center", // Agar gambar posisinya di tengah
+            backgroundRepeat: "no-repeat",
             width: "100%",
-            height: "100vh",
+            height: "1780px",
           }}
         >
-          {children}
+          <PaddingContainer>{children}</PaddingContainer>
         </div>
       </body>
     </html>

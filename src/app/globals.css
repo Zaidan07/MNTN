@@ -6,6 +6,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background: #0B1D26; */
+}
+
+body {
+  background: #0B1D26;
 }
 
 :root {
