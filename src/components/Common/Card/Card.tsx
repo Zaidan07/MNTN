@@ -10,57 +10,62 @@ export default function ContentSection() {
       {contentData.map((content, index) => (
         <div
           key={index}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[114px] md:px-[70px]"
+          className="grid grid-cols-1 md:grid-cols-3 md:px-[50px]"
         >
-          <div className="relative ">
-            <Text
-              size="h1"
-              variant="default"
-              className="absolute -top-10 -left-10 font-bold opacity-10"
-            >
-              {index < 10 ? `0${index + 1}` : index + 1}
-            </Text>
-
-            <div className="relative z-10 w-[560px] pt-[50px]">
-              <div className="flex pb-[27px]">
-                <Image src={line} alt="" className="pb-[2px]" />
-                <Text
-                  size="p"
-                  variant="primary"
-                  className="font-poppins font-bold uppercase pl-[24px] tracking-[6px]"
-                >
-                  Get Started
-                </Text>
-              </div>
-              <Text size="h3" variant="default" className="font-playfair">
-                {content.title}
-              </Text>
+          <div className="relative col-span-2">
+            <div className="relative z-10 w-[600px] h-[432px] pt-[50px]">
               <Text
-                size="p"
+                size="h1"
                 variant="default"
-                className="font-poppins font-normal text-[13px] tracking-[1px] leading-[20px] pt-[27px]"
+                className="absolute -top-10 -left-10 font-bold opacity-10 pl-[33px] pt-[4px]"
               >
-                {content.paragraph}
+                {index < 10 ? `0${index + 1}` : index + 1}
               </Text>
-              <div className="flex gap-[16px]">
+              <div className="pl-[96px]">
+                <div className="flex pb-[27px]">
+                  <Image src={line} alt="" className="pb-[2px]" />
+                  <Text
+                    size="small"
+                    variant="primary"
+                    className="font-poppins font-bold uppercase pl-[24px] tracking-[6px]"
+                  >
+                    Get Started
+                  </Text>
+                </div>
                 <Text
-                  size="p"
-                  variant="primary"
-                  className="font-poppins font-semibold mt-[27px]"
+                  size="h3"
+                  variant="default"
+                  className="font-playfair pb-[28px]"
                 >
-                  read more
+                  {content.title}
                 </Text>
-                <Image src={arrowRight} alt="" className="pt-[28px]"/>
+                <Text
+                  size="small"
+                  variant="default"
+                  className="font-poppins font-semibold text-[12px] tracking-[1px] leading-[25px]"
+                >
+                  {content.paragraph}
+                </Text>
+                <div className="flex gap-[16px]">
+                  <Text
+                    size="p"
+                    variant="primary"
+                    className="font-poppins font-semibold mt-[27px] text-[12px] tracking-[1px]" 
+                  >
+                    read more
+                  </Text>
+                  <Image src={arrowRight} alt="" className="pt-[28px]" width={16} height={24}/>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Bagian kanan: Gambar */}
-          <div className="relative w-full h-full">
+          <div className="relative w-[466] h-full">
             <Image
               src={content.image}
               alt={content.title}
-              fill
+              width={466}
+              height={620}
               style={{ objectFit: "cover" }}
             />
           </div>

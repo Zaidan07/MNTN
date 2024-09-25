@@ -6,7 +6,7 @@ import Navbar from "../Common/Navbar/Navbar";
 
 export default function Header() {
   return (
-    <div>
+    <>
       <Navbar />
       <div className="flex justify-center flex-col mt-[198px] px-[210px] ml-[70px]">
         <div className="flex items-center justify-between w-[316px] h-[22px] gap-[20px]">
@@ -37,6 +37,6 @@ export default function Header() {
           <Image src={arrow_down} alt="arrow down" width={16} height={24} />
         </div>
       </div>
-    </div>
+    </>
   );
 }
