@@ -1,8 +1,8 @@
 import Image from "next/image";
 import line from "@/assets/logo/line.svg";
 import arrowRight from "@/assets/logo/arrow_right.svg";
-import { contentData } from "./contentData"; // Import data dari file terpisah
-import Text from "../Text/Text"; // Komponen teks Anda
+import { contentData } from "./contentData";
+import Text from "../Text/Text";
 
 export default function ContentSection() {
   return (

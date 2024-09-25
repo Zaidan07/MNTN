@@ -21,8 +21,8 @@ export default function RootLayout({
           className="absolute"
           style={{
             backgroundImage: `url(${bgheros.src})`,
-            backgroundSize: "cover", // Ganti menjadi cover
-            backgroundPosition: "center", // Agar gambar posisinya di tengah
+            backgroundSize: "cover", 
+            backgroundPosition: "center", 
             backgroundRepeat: "no-repeat",
             width: "100%",
             height: "1780px",
