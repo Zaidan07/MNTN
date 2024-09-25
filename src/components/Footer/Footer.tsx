@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <div className="w-full h-[280px] grid grid-cols-3 pb-[380px] px-[50px]">
         <div className="flex flex-col w-[350px]">
-          <Image src={Logo} alt="" />
+          <Image src={Logo} alt="" className=" cursor-pointer"/>
           <Text
             size="p"
             variant="default"
@@ -32,11 +32,11 @@ export default function Footer() {
             More on The Blog
           </Text>
           <div className="flex flex-col gap-[30px] mt-[24px]">
-            <Text size="small" variant="default" className="font-poppins">About MNTM</Text>
-            <Text size="small" variant="default" className="font-poppins">Contributors & Writers</Text>
-            <Text size="small" variant="default" className="font-poppins">Write For Us</Text>
-            <Text size="small" variant="default" className="font-poppins">Contact Us</Text>
-            <Text size="small" variant="default" className="font-poppins">Privacy Policy</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">About MNTM</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">Contributors & Writers</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">Write For Us</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">Contact Us</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">Privacy Policy</Text>
           </div>
         </div>
         <div className="ml-[265px] w-[140px]">
@@ -48,9 +48,9 @@ export default function Footer() {
             More on MNTN
           </Text>
           <div className="flex flex-col gap-[30px] mt-[24px]">
-            <Text size="small" variant="default" className="font-poppins">The Team</Text>
-            <Text size="small" variant="default" className="font-poppins">Jobs</Text>
-            <Text size="small" variant="default" className="font-poppins">Press</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">The Team</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">Jobs</Text>
+            <Text size="small" variant="default" className="font-poppins cursor-pointer">Press</Text>
           </div>
         </div>
       </div>

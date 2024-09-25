@@ -48,7 +48,7 @@ export default function ContentSection() {
                     >
                       {content.paragraph}
                     </Text>
-                    <div className="flex gap-[16px]">
+                    <div className="flex gap-[16px] cursor-pointer">
                       <Text
                         size="small"
                         variant="primary"
@@ -62,7 +62,6 @@ export default function ContentSection() {
                 </div>
               </div>
 
-              {/* Image */}
               <div className="relative w-[466px] h-full">
                 <Image
                   src={content.image}
@@ -119,7 +118,7 @@ export default function ContentSection() {
                     >
                       {content.paragraph}
                     </Text>
-                    <div className="flex gap-[16px]">
+                    <div className="flex gap-[16px] cursor-pointer">
                       <Text
                         size="small"
                         variant="primary"

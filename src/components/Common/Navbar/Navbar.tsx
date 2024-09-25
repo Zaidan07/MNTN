@@ -7,21 +7,21 @@ export default function Navbar() {
   return (
     <div className="flex w-full h-[25px] pt-[64px] mb-[198px] items-center">
       <div className="flex">
-        <Image src={Logo} alt="" width={108} height={24} />
-        <div className="flex gap-[40px] px-[425px]">
-          <Text size="small" variant="default" className="font-semibold font-poppins">
+        <Image src={Logo} alt="" width={108} height={24} className=" cursor-pointer"/>
+        <div className="flex gap-[40px] px-[445px]">
+          <Text size="small" variant="default" className="font-semibold font-poppins cursor-pointer">
             Equipment
           </Text>
-          <Text size="small" variant="default" className="font-semibold font-poppins">
+          <Text size="small" variant="default" className="font-semibold font-poppins cursor-pointer">
             About us
           </Text>
-          <Text size="small" variant="default" className="font-semibold font-poppins">
+          <Text size="small" variant="default" className="font-semibold font-poppins cursor-pointer">
             Blog
           </Text>
         </div>
         <div className="flex items-center gap-[8px]">
-          <Image src={profile} alt="" />
-          <Text size="small" variant="default" className="font-semibold font-poppins">Account</Text>
+          <Image src={profile} alt="" className=" cursor-pointer"/>
+          <Text size="small" variant="default" className="font-semibold font-poppins cursor-pointer">Account</Text>
         </div>
       </div>
     </div>

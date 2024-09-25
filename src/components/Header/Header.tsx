@@ -3,12 +3,26 @@ import arrow_down from "@/assets/icon/arrow_down.svg";
 import line from "@/assets/icon/line.svg";
 import Text from "../Common/Text/Text";
 import Navbar from "../Common/Navbar/Navbar";
+// import FollowUs from "./FollowUs";
+import ig from "@/assets/icon/instagram.svg";
+import tw from "@/assets/icon/twitter.svg";
 
 export default function Header() {
   return (
     <>
       <Navbar />
       <div className="flex justify-center flex-col mt-[198px] px-[210px] ml-[70px]">
+        <div className="absolute left-[50px] top-[352px] flex flex-col w-auto h-auto items-center justify-center">
+          <Text
+            size="p"
+            variant="default"
+            className="font-poppins font-semibold transform text-center rotate-[90deg] items-center justify-center"
+          >
+            Follow us
+          </Text>
+          <Image src={ig} alt="" className="pt-[60px]"/>
+          <Image src={tw} alt="" className="pt-[30px]"/>
+        </div>
         <div className="flex items-center justify-between w-[316px] h-[22px] gap-[20px]">
           <Image src={line} alt="line" width={72} height={2} />
           <Text
@@ -21,7 +35,11 @@ export default function Header() {
         </div>
 
         <div className="w-[950px] h-[200px] pt-[32px] flex items-center">
-          <Text size="h2" variant="default" className="text-[77px] font-playfair">
+          <Text
+            size="h2"
+            variant="default"
+            className="text-[77px] font-playfair"
+          >
             Be Prepared For The Mountains And Beyond!
           </Text>
         </div>
@@ -34,7 +52,13 @@ export default function Header() {
           >
             scroll down
           </Text>
-          <Image src={arrow_down} alt="arrow down" width={16} height={24} className="pt-[10px]"/>
+          <Image
+            src={arrow_down}
+            alt="arrow down"
+            width={16}
+            height={24}
+            className="pt-[15px] animate-bounce"
+          />
         </div>
       </div>
     </>
