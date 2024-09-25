@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Logo from "@/assets/logo/Logo.svg";
+import Logo from "/src/assets/logo/Logo.svg";
 import Text from "@/components/Common/Text/Text";
-import profile from "@/assets/logo/cart.svg";
+import profile from "/src/assets/logo/cart.svg";
 
 export default function Navbar() {
   return (

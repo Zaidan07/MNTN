@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/assets/logo/logo.svg";
+import Logo from "/src/assets/logo/logo.svg";
 import Text from "@/components/Common/Text/Text";
 
 export default function Footer() {
@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <div className="w-full h-[280px] grid grid-cols-3 pb-[380px] px-[50px]">
         <div className="flex flex-col w-[350px]">
-          <Image src={logo} alt="" />
+          <Image src={Logo} alt="" />
           <Text
             size="p"
             variant="default"

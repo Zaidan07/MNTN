@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { playfair, poppins } from "./fonts/font";
 import PaddingContainer from "@/components/Common/PaddingContainer/PaddingContainer";
-import bgheros from "@/assets/hero/hero-image.png";
+import bgheros from "/src/assets/hero/hero-image.png";
 
 export const metadata: Metadata = {
   title: "Create Next App",

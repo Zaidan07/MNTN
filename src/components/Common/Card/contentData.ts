@@ -1,6 +1,6 @@
-import img1 from "@/assets/contentImage/01.png";
-import img2 from "@/assets/contentImage/02.png";
-import img3 from "@/assets/contentImage/03.png";
+import img1 from "/src/assets/contentImage/01.png";
+import img2 from "/src/assets/contentImage/02.png";
+import img3 from "/src/assets/contentImage/03.png";
 
 export const contentData = [
   {

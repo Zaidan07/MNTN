@@ -1,6 +1,6 @@
 import Image from "next/image";
-import line from "@/assets/logo/line.svg";
-import arrowRight from "@/assets/logo/arrow_right.svg";
+import line from "/src/assets/logo/line.svg";
+import arrowRight from "/src/assets/logo/arrow_right.svg";
 import { contentData } from "./contentData";
 import Text from "../Text/Text";
 

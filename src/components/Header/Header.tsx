@@ -1,6 +1,6 @@
 import Image from "next/image";
-import arrow_down from "@/assets/logo/arrow_down.svg";
-import line from "@/assets/logo/line.svg";
+import arrow_down from "/src/assets/logo/arrow_down.svg";
+import line from "/src/assets/logo/line.svg";
 import Text from "../Common/Text/Text";
 import Navbar from "../Common/Navbar/Navbar";
 
