@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "/src/assets/logo/logo.svg";
+import Logo from "@/assets/icon/logo.svg";
 import Text from "@/components/Common/Text/Text";
 
 export default function Footer() {

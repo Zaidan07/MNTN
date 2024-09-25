@@ -1,6 +1,6 @@
 import Image from "next/image";
-import arrow_down from "/src/assets/logo/arrow_down.svg";
-import line from "/src/assets/logo/line.svg";
+import arrow_down from "@/assets/icon/arrow_down.svg";
+import line from "@/assets/icon/line.svg";
 import Text from "../Common/Text/Text";
 import Navbar from "../Common/Navbar/Navbar";
 
@@ -34,7 +34,7 @@ export default function Header() {
           >
             scroll down
           </Text>
-          <Image src={arrow_down} alt="arrow down" width={16} height={24} />
+          <Image src={arrow_down} alt="arrow down" width={16} height={24} className="pt-[10px]"/>
         </div>
       </div>
     </>
