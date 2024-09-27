@@ -5,8 +5,8 @@ import PaddingContainer from "@/components/Common/PaddingContainer/PaddingContai
 import bgheros from "@/assets/hero/hero-image.png";
 
 export const metadata: Metadata = {
-  title: "MNTN",
-  description: "MNTN",
+  title: "MNTN Hiking Guide",
+  description: "A Hiking Guide Website MNTN",
 };
 
 export default function RootLayout({

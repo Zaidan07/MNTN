@@ -1,9 +1,11 @@
+"use client";
+// import { useEffect, useState } from "react";
 import Image from "next/image";
 import arrow_down from "@/assets/icon/arrow_down.svg";
 import line from "@/assets/icon/line.svg";
 import Text from "../Common/Text/Text";
 import Navbar from "../Common/Navbar/Navbar";
-// import FollowUs from "./FollowUs";
+// import FollowUs from './FollowUs';
 import ig from "@/assets/icon/instagram.svg";
 import tw from "@/assets/icon/twitter.svg";
 
@@ -20,8 +22,40 @@ export default function Header() {
           >
             Follow us
           </Text>
-          <Image src={ig} alt="" className="pt-[60px]"/>
-          <Image src={tw} alt="" className="pt-[30px]"/>
+          <Image src={ig} alt="Instagram Icon" className="pt-[60px]" />
+          <Image src={tw} alt="Twitter Icon" className="pt-[30px]" />
+        </div>
+        <div className="absolute right-[100px] top-[305px] flex flex-col w-auto h-auto items-center justify-center">
+          <Text
+            size="small"
+            variant="default"
+            className="font-poppins font-bold mb-[40px]"
+          >
+            Start
+          </Text>
+          <div className="flex flex-col text-right space-y-2">
+            <Text
+              size="small"
+              variant="default"
+              className="font-poppins font-bold pb-[8px]"
+            >
+              01
+            </Text>
+            <Text
+              size="small"
+              variant="default"
+              className="font-poppins font-bold pb-[8px]"
+            >
+              02
+            </Text>
+            <Text
+              size="small"
+              variant="default"
+              className="font-poppins font-bold"
+            >
+              03
+            </Text>
+          </div>
         </div>
         <div className="flex items-center justify-between w-[316px] h-[22px] gap-[20px]">
           <Image src={line} alt="line" width={72} height={2} />
@@ -44,7 +78,7 @@ export default function Header() {
           </Text>
         </div>
 
-        <div className="flex gap-[10px] mt-[50px] text-center ">
+        <div className="flex gap-[10px] mt-[50px] text-center">
           <Text
             size="p"
             variant="default"
@@ -61,6 +95,8 @@ export default function Header() {
           />
         </div>
       </div>
+
+      {/* Slider di dalam Header */}
     </>
   );
 }

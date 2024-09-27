@@ -62,7 +62,7 @@ export default function ContentSection() {
                 </div>
               </div>
 
-              <div className="relative w-[466px] h-full">
+              <div className="relative w-[466px] h-full z-0">
                 <Image
                   src={content.image}
                   alt={content.title}
@@ -74,7 +74,7 @@ export default function ContentSection() {
             </>
           ) : (
             <>
-              <div className="relative w-[466px] h-full">
+              <div className="relative w-[466px] h-full z-0">
                 <Image
                   src={content.image}
                   alt={content.title}
