@@ -4,19 +4,26 @@ import Image from "next/image";
 import arrow_down from "@/assets/icon/arrow_down.svg";
 import line from "@/assets/icon/line.svg";
 import Text from "../Common/Text/Text";
-import Navbar from "../Common/Navbar/Navbar";
+// import Navbar from "../Common/Navbar/Navbar";
 import ig from "@/assets/icon/instagram.svg";
 import tw from "@/assets/icon/twitter.svg";
 import front from "@/assets/images/front2.png";
+import Navbar from "../Common/Navbar/Navbar";
 
 export default function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [imagePosition, setImagePosition] = useState(0); // State for image position
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = (scrollTop / docHeight) * 100;
+
     setScrollPosition(scrollPercent);
+
+    // Adjust the image position based on scroll position
+    setImagePosition(scrollTop * 0.1); // Change 0.3 to control the parallax effect speed
   };
 
   useEffect(() => {
@@ -27,15 +34,24 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="w-auto h-[1380px]">
+    <div className="w-auto h-[1380px] relative">
       <Navbar />
       <Image
         src={front}
         alt=""
-        className="bottom-0 z-20 absolute left-0 top-[791px] right-0"
+        className="z-20 absolute left-0"
+        style={{
+          width: "100vw",
+          height: "auto",
+          top: `calc(730px - ${imagePosition}px)`,
+          transition: "top 0.1s ease-out", 
+        }}
+        width={1520}
+        height={280}
       />
-      <div className="flex justify-center flex-col mt-[198px] px-[210px] ml-[70px]">
-        <div className="absolute left-[50px] top-[352px] flex flex-col w-auto h-auto items-center justify-center">
+
+      <div className="flex justify-center flex-col mt-[198px]">
+        <div className="absolute left-[80px] top-[350px] flex flex-col w-auto h-auto items-center justify-center">
           <Text
             size="p"
             variant="default"
@@ -89,7 +105,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-[316px] h-[22px] gap-[20px]">
+        <div className="flex items-center justify-between w-[316px] h-[22px] gap-[20px] ml-[345px]">
           <Image src={line} alt="line" width={72} height={2} />
           <Text
             size="p"
@@ -100,8 +116,7 @@ export default function Header() {
           </Text>
         </div>
 
-        {/* Heading Section */}
-        <div className="w-[950px] h-[200px] pt-[32px] flex items-center">
+        <div className="w-[950px] h-[200px] pt-[32px] flex items-center ml-[345px]">
           <Text
             size="h2"
             variant="default"
@@ -111,8 +126,7 @@ export default function Header() {
           </Text>
         </div>
 
-        {/* Scroll Down Section */}
-        <div className="flex gap-[10px] mt-[50px] text-center">
+        <div className="flex gap-[10px] mt-[20px] text-center ml-[345px]">
           <Text
             size="p"
             variant="default"
