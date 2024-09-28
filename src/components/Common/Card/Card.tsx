@@ -6,7 +6,7 @@ import Text from "../Text/Text";
 
 export default function ContentSection() {
   return (
-    <div className="pt-[80px]">
+    <div className="pt-[0px]">
       {contentData.map((content, index) => (
         <div
           key={index}
@@ -15,7 +15,7 @@ export default function ContentSection() {
           {index % 2 === 0 ? (
             <>
               <div className="relative col-span-2">
-                <div className="relative z-10 w-[770px] h-[432px] pt-[50px]">
+                <div className="relative z-20 w-[750px] h-[432px] pt-[50px]">
                   <Text
                     size="h1"
                     variant="default"
@@ -62,11 +62,11 @@ export default function ContentSection() {
                 </div>
               </div>
 
-              <div className="relative w-[466px] h-full z-0">
+              <div className="relative w-auto h-full z-40 mr-[20px]">
                 <Image
                   src={content.image}
                   alt={content.title}
-                  width={466}
+                  width={460}
                   height={620}
                   style={{ objectFit: "cover" }}
                 />
@@ -74,17 +74,17 @@ export default function ContentSection() {
             </>
           ) : (
             <>
-              <div className="relative w-[466px] h-full z-0">
+              <div className="relative w-auto h-full z-40 mr-[20px]">
                 <Image
                   src={content.image}
                   alt={content.title}
-                  width={466}
+                  width={460}
                   height={620}
                   style={{ objectFit: "cover" }}
                 />
               </div>
 
-              <div className="relative col-span-2 pl-[198px]">
+              <div className="relative col-span-2 pl-[100px]">
                 <div className="relative z-10 w-[700px] h-[432px] pt-[50px]">
                   <Text
                     size="h1"

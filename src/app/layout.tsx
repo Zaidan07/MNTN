@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { playfair, poppins } from "./fonts/font";
 import PaddingContainer from "@/components/Common/PaddingContainer/PaddingContainer";
-import bgheros from "@/assets/hero/hero-image.png";
+// import bgheros from "@/assets/hero/hero-image.png";
+import back from "@/assets/images/back.png"
 
 export const metadata: Metadata = {
   title: "MNTN Hiking Guide",
@@ -21,12 +22,13 @@ export default function RootLayout({
         <div
           className="absolute"
           style={{
-            backgroundImage: `url(${bgheros.src})`,
+            backgroundImage: `url(${back.src})`,
             backgroundSize: "cover", 
             backgroundPosition: "center", 
             backgroundRepeat: "no-repeat",
             width: "100%",
-            height: "1780px",
+            height: "1380px",
+            zIndex: "-1",
           }}
         >
           <PaddingContainer>{children}</PaddingContainer>
