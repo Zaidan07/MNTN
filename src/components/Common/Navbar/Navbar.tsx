@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="w-full h-auto py-[16px] px-[20px] fixed lg:px-[80px] z-50 top-0 mb-[30px] backdrop-blur-lg bg-white/5 transition-all duration-300"
+      className="w-full h-auto py-[16px] px-[20px] md:py-[40px] md:relative fixed md:px-[80px] z-50 top-0 mb-[30px] backdrop-blur-[16px] bg-white/5 md:backdrop-blur-none md:bg-transparent transition-all duration-300"
     >
       <div className="flex justify-between items-center">
         {/* Logo Section (Hidden when menu is open) */}
@@ -32,21 +32,21 @@ export default function Navbar() {
           <Text
             size="small"
             variant="default"
-            className="font-semibold font-poppins cursor-pointer"
+            className="font-semibold font-poppins cursor-pointer hover:text-[#fbd784]"
           >
             Equipment
           </Text>
           <Text
             size="small"
             variant="default"
-            className="font-semibold font-poppins cursor-pointer"
+            className="font-semibold font-poppins cursor-pointer hover:text-[#fbd784]"
           >
             About Us
           </Text>
           <Text
             size="small"
             variant="default"
-            className="font-semibold font-poppins cursor-pointer"
+            className="font-semibold font-poppins cursor-pointer hover:text-[#fbd784]"
           >
             Blog
           </Text>

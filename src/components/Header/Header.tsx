@@ -65,7 +65,7 @@ export default function Header() {
       />
 
       <div className="flex justify-center flex-col mt-[30px] md:mt-[198px]">
-        <div className="absolute left-[10px] md:left-[80px] top-[300px] md:top-[100px] flex flex-col w-auto h-auto items-center justify-center">
+        <div className="absolute left-[10px] md:left-[80px] top-[300px] md:top-[400px] flex flex-col w-auto h-auto items-center justify-center">
           <Text
             size="p"
             variant="default"
