@@ -2,23 +2,33 @@ import Image from "next/image";
 import Logo from "@/assets/icon/logo.svg";
 import Text from "@/components/Common/Text/Text";
 import profile from "@/assets/icon/cart.svg";
-import { useState } from "react";
+import { useState} from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+
   return (
-    <div className="flex w-full h-[25px] pt-[64px] mb-[198px] items-center z-10 px-[80px]">
-      <div className="flex px-[0px]">
-        <Image
-          src={Logo}
-          alt=""
-          width={108}
-          height={24}
-          className="md:ml-[25px] cursor-pointer"
-        />
-        <div className="hidden md:flex gap-[40px] px-[420px]">
+    <div
+      className="w-full h-auto py-[16px] px-[20px] fixed lg:px-[80px] z-50 top-0 mb-[30px] backdrop-blur-lg bg-white/5 transition-all duration-300"
+    >
+      <div className="flex justify-between items-center">
+        {/* Logo Section (Hidden when menu is open) */}
+        {!menuOpen && (
+          <div className="flex items-center">
+            <Image
+              src={Logo}
+              alt="Logo"
+              width={108}
+              height={24}
+              className="cursor-pointer"
+            />
+          </div>
+        )}
+
+        {/* Menu Items for Larger Screens */}
+        <div className="hidden md:flex gap-10 items-center">
           <Text
             size="small"
             variant="default"
@@ -31,7 +41,7 @@ export default function Navbar() {
             variant="default"
             className="font-semibold font-poppins cursor-pointer"
           >
-            About us
+            About Us
           </Text>
           <Text
             size="small"
@@ -41,8 +51,16 @@ export default function Navbar() {
             Blog
           </Text>
         </div>
-        <div className="hidden md:flex items-center gap-[8px]">
-          <Image src={profile} alt="" className=" cursor-pointer" />
+
+        {/* Account Section for Larger Screens */}
+        <div className="hidden md:flex items-center gap-3">
+          <Image
+            src={profile}
+            alt="Profile"
+            width={24}
+            height={24}
+            className="cursor-pointer"
+          />
           <Text
             size="small"
             variant="default"
@@ -51,47 +69,61 @@ export default function Navbar() {
             Account
           </Text>
         </div>
-      </div>
-      <div className="flex md:hidden gap-[40px] pl-[100px]">
-        <div onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </div>
-        {menuOpen && (
-          <div className="flex flex-col items-center">
-            <Text
-              size="small"
-              variant="default"
-              className="font-semibold font-poppins cursor-pointer"
-            >
-              Equipment
-            </Text>
-            <Text
-              size="small"
-              variant="default"
-              className="font-semibold font-poppins cursor-pointer"
-            >
-              About us
-            </Text>
-            <Text
-              size="small"
-              variant="default"
-              className="font-semibold font-poppins cursor-pointer"
-            >
-              Blog
-            </Text>
-            <div className="flex items-center gap-[8px]">
-              <Image src={profile} alt="" className=" cursor-pointer" />
-              <Text
-                size="small"
-                variant="default"
-                className="font-semibold font-poppins cursor-pointer"
-              >
-                Account
-              </Text>
-            </div>
+
+        {/* Hamburger Menu for Mobile Screens */}
+        <div className="flex md:hidden text-white">
+          <div onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
           </div>
-        )}
+        </div>
       </div>
+
+      {/* Dropdown Menu for Mobile Screens */}
+      {menuOpen && (
+        <div
+          className={`flex flex-col items-center mt-4 md:hidden p-4 transition-all duration-300 ease-in-out ${
+            menuOpen ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <Text
+            size="small"
+            variant="default"
+            className="font-semibold font-poppins cursor-pointer mb-2"
+          >
+            Equipment
+          </Text>
+          <Text
+            size="small"
+            variant="default"
+            className="font-semibold font-poppins cursor-pointer mb-2"
+          >
+            About Us
+          </Text>
+          <Text
+            size="small"
+            variant="default"
+            className="font-semibold font-poppins cursor-pointer mb-2"
+          >
+            Blog
+          </Text>
+          <div className="flex items-center gap-2 mt-4">
+            <Image
+              src={profile}
+              alt="Profile"
+              width={24}
+              height={24}
+              className="cursor-pointer"
+            />
+            <Text
+              size="small"
+              variant="default"
+              className="font-semibold font-poppins cursor-pointer"
+            >
+              Account
+            </Text>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
