@@ -22,14 +22,12 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="32x32" />
       <body className={`${playfair.variable} ${poppins.variable} antialiased`}>
         <div
-          className="absolute"
+          className="absolute w-full h-full md:h-[1380px]"
           style={{
             backgroundImage: `url(${back.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            width: "100%",
-            height: "1380px",
             zIndex: "-1",
           }}
         >

@@ -4,7 +4,6 @@ import Image from "next/image";
 import arrow_down from "@/assets/icon/arrow_down.svg";
 import line from "@/assets/icon/line.svg";
 import Text from "../Common/Text/Text";
-// import Navbar from "../Common/Navbar/Navbar";
 import ig from "@/assets/icon/instagram.svg";
 import tw from "@/assets/icon/twitter.svg";
 import front from "@/assets/images/front2.png";
@@ -12,7 +11,7 @@ import Navbar from "../Common/Navbar/Navbar";
 
 export default function Header() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [imagePosition, setImagePosition] = useState(0); // State for image position
+  const [imagePosition, setImagePosition] = useState(0); 
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -22,8 +21,7 @@ export default function Header() {
 
     setScrollPosition(scrollPercent);
 
-    // Adjust the image position based on scroll position
-    setImagePosition(scrollTop * 0.1); // Change 0.3 to control the parallax effect speed
+    setImagePosition(scrollTop * 0.1); 
   };
 
   useEffect(() => {
@@ -34,7 +32,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="w-auto h-[1380px] relative">
+    <div className="w-auto h-[900px] md:h-[1380px] relative">
       <Navbar />
       <Image
         src={front}
@@ -50,20 +48,20 @@ export default function Header() {
         height={280}
       />
 
-      <div className="flex justify-center flex-col mt-[198px]">
-        <div className="absolute left-[80px] top-[350px] flex flex-col w-auto h-auto items-center justify-center">
+      <div className="flex justify-center flex-col mt-[30px] md:mt-[198px]">
+        <div className="absolute left-[10px] md:left-[80px] top-[300px] md:top-[350px] flex flex-col w-auto h-auto items-center justify-center">
           <Text
             size="p"
             variant="default"
-            className="font-poppins font-semibold transform text-center rotate-[90deg] items-center justify-center"
+            className="font-poppins font-semibold transform text-center rotate-[90deg] items-center justify-center text-[6px]"
           >
             Follow us
           </Text>
-          <Image src={ig} alt="Instagram Icon" className="pt-[60px]" />
-          <Image src={tw} alt="Twitter Icon" className="pt-[30px]" />
+          <Image src={ig} alt="Instagram Icon" className="pt-[15px] md:pt-[60px] w-[10px] md:w-[24px] h-auto" />
+          <Image src={tw} alt="Twitter Icon" className="pt-[10px] md:pt-[30px] w-[10px] md:w-[24px] h-auto" />
         </div>
 
-        <div className="fixed right-[80px] top-[305px] flex flex-row items-center justify-center z-50">
+        <div className="hidden md:fixed right-[60px] top-[305px] md:flex flex-row items-center justify-center z-50">
           <div className="flex flex-col text-right space-y-2 mr-[10px]">
             <Text
               size="small"
@@ -105,41 +103,39 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between w-[316px] h-[22px] gap-[20px] ml-[345px]">
-          <Image src={line} alt="line" width={72} height={2} />
+        <div className="flex items-center justify-between w-[140px] gap-[10px] ml-[60px] md:w-[316px] h-[22px] md:gap-[20px] md:ml-[345px]">
+          <Image src={line} alt="line" className="w-[35px] md:w-[72px] h-[2px]"/>
           <Text
             size="p"
             variant="primary"
-            className="font-semibold uppercase tracking-[6px] font-poppins"
+            className="font-semibold uppercase text-[6px] tracking-[3px] md:tracking-[6px] font-poppins"
           >
             A Hiking Guide
           </Text>
         </div>
 
-        <div className="w-[950px] h-[200px] pt-[32px] flex items-center ml-[345px]">
+        <div className="w-[300px] md:w-[950px] md:h-[200px] pt-[5px] md:pt-[32px] flex items-center ml-[60px] md:ml-[345px]">
           <Text
             size="h2"
             variant="default"
-            className="text-[77px] font-playfair"
+            className="text-[25px] font-playfair"
           >
             Be Prepared For The Mountains And Beyond!
           </Text>
         </div>
 
-        <div className="flex gap-[10px] mt-[20px] text-center ml-[345px]">
+        <div className="flex gap-[10px] mt-[5px] md:mt-[20px] text-center ml-[60px] md:ml-[345px]">
           <Text
             size="p"
             variant="default"
-            className="font-semibold font-poppins mt-[10px]"
+            className="font-semibold font-poppins mt-[5px] md:mt-[10px]"
           >
             scroll down
           </Text>
           <Image
             src={arrow_down}
             alt="arrow down"
-            width={16}
-            height={24}
-            className="pt-[15px] animate-bounce"
+            className="pt-[15px] animate-bounce w-[6px] md:w-[16px] md:h-[24px]"
           />
         </div>
       </div>

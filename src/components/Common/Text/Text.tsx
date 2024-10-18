@@ -23,14 +23,14 @@ import React from 'react'
 
     const sizeClasses = {
         h1: 'text-[180px] leading-[180px]',
-        h2: 'text-[88px] leading-[100px]',
-        h3: 'text-[64px] leading-[64px]',
+        h2: 'text-[40px] md:text-[77px] leading-[30px] md:leading-[100px]',
+        h3: 'text-[40px] md:text-[64px] leading-[40px] md:leading-[64px]',
         h4: 'text-[24px] leading-[31px]',
         h5: 'text-[22px] leading-[29px]',
         h6: 'text-[20px] leading-[26px]',
-        p: 'text-[18px] leading-[25px]',
+        p: 'text-[8px] md:text-[18px] leading-[25px]',
         small:
-        'text-[15px] leading-[20px]',
+        'text-[10px] md:text-[15px] leading-[15px] md:leading-[20px]',
     }
 
     const fontFamilyClasses = {
